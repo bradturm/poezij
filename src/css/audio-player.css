@@ -1,0 +1,41 @@
+.player-container {
+
+    width: 10rem;
+    height: 10rem;
+    padding-left: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 5rem 2rem;
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+    align-items: center;
+    grid-template-areas:
+        "play knob"
+        "slider slider";
+
+}
+
+
+.play-button {
+    grid-area: play;
+
+}
+
+.vol-knob {
+    grid-area: knob;
+    visibility: hidden;
+}
+
+.vol-knob.show {
+    visibility: visible;
+}
+
+.slider {
+    grid-area: slider;
+    visibility: hidden;
+    width: 8rem;
+}
+
+.slider.show {
+    visibility: visible;
+}

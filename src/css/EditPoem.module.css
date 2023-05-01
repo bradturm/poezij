@@ -1,0 +1,58 @@
+.page_container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 1rem;
+}
+
+.lines_table,
+.notes_table {
+  border-collapse: collapse;
+  width: 100%;
+
+}
+
+.edit_table_header,
+.edit_table_row {
+  border: 1px solid #ffffff;
+  text-align: left;
+  padding: 8px;
+  font-size: 14px;
+}
+
+.edit_table_header {
+  background-color: rgb(117, 201, 250);
+}
+
+.edit_table_row {
+  background-color: rgb(205, 235, 253);
+}
+
+.add_note_form {
+  display: flex;
+  gap: 5px;
+}
+
+.add_note_form td:last-child {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.add_note_form * {
+  font-size: 14px;
+}
+
+.add_note_button {
+
+  width: 50px;
+}
+
+.add_note_line_num {
+
+  width: 40px;
+}
+
+.add_note_word_num {
+
+  width: 40px;
+}

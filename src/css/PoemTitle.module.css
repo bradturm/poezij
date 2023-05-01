@@ -1,0 +1,68 @@
+.title-fy,
+.title-nl {
+    text-align: center;
+    align-self: baseline;
+    justify-self: center;
+    font-size: clamp(0.9em, 0.3em + 1vw, 1.2em);
+    font-weight: 700;
+    /* padding-left: 5rem;
+    padding-right: 5rem; */
+}
+
+.title-fy p,
+.title-nl p {
+    margin: 0;
+    /* padding-left: 5rem;
+    padding-right: 5rem; */
+}
+
+.title-fy {
+    grid-area: title-fy;
+}
+
+.title-nl {
+    grid-area: title-nl;
+}
+
+.poet-name {
+    grid-area: poet-name;
+    align-self: baseline;
+    justify-self: center;
+    font-size: clamp(0.8em, 0.3em + 1vw, 1em);
+    font-weight: 500;
+    font-style: italic;
+}
+
+.poet-name p {
+    margin: 0;
+}
+
+.title_container_grid {
+    display: grid;
+    width: 100%;
+    margin-inline: auto;
+    justify-content: center;
+    grid-auto-columns: 1fr 1fr;
+    grid-template-rows: 2fr fr;
+    grid-template-areas:
+        'title-fy title-nl'
+        'poet-name poet-name';
+    max-width: 50rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.show_one {
+
+    grid-auto-columns: 1fr;
+    grid-template-areas:
+        'title'
+        'poet-name';
+}
+
+.show_one .title-fy,
+.show_one .title-nl {
+
+    grid-area: title;
+
+}

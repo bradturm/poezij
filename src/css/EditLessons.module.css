@@ -1,0 +1,576 @@
+.popup_background {
+    position: fixed;
+
+    width: 100%;
+    height: 100%;
+    background-color: rgba(120, 120, 120, 0.3);
+    z-index: 1100;
+
+}
+
+.poem_list_popup,
+.search_popup,
+.lesson_popup {
+
+    width: 70vw;
+    height: 70vh;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1101;
+    border-radius: 3rem;
+    box-shadow: 0.8rem 0.8rem 1.4rem var(--greyDark), -0.2rem -0.2rem 1.8rem var(--greyLight-1);
+    padding: 2rem;
+    background: var(--greyLight-1);
+}
+
+.lesson_popup {
+
+    width: 90vw;
+    height: 80vh;
+}
+
+.lesson-pagination {
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+    border-radius: 0.25rem;
+
+    margin-top: 0;
+    margin-bottom: 1rem;
+
+}
+
+/*
+.page-item {}
+*/
+.page-item:first-child .page-link {
+    margin-left: 0;
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+}
+
+.page-link {
+    position: relative;
+    display: block;
+    padding: 0.5rem 0.75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: #007bff;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+}
+
+/*
+.page-item.active .page-link {
+      z-index: 1;  REMOVED THIS SO IT DOES NOT SHOW THROUGH - CAUSES OTHER ISSUES?! 
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+*/
+.page-item.active .poem_btn {
+    color: #fff;
+    background-color: var(--primary-dark);
+    /*  border-color: #007bff;*/
+}
+
+
+
+.closeBtn {
+    cursor: pointer;
+    font-weight: 500;
+    padding: 0.5rem 0.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: none;
+    border-radius: 1rem;
+    margin-top: 0.8rem;
+    margin-right: 0.8rem;
+    background: transparent;
+    /*
+    align-self: flex-end;
+    color: #2c3e50;
+    transition: all 0.25s ease;
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.06);
+    */
+}
+
+.closeBtn:hover {
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.04);
+}
+
+.lesson-pagination-container {
+    grid-area: pagination;
+
+}
+
+.edit_lessons_grid {
+    max-height: min(90vh, 200rem);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 2rem 4rem 1fr;
+    /*grid-template-rows: 7rem calc(100vh - 22.3rem) 10rem; */
+    grid-template-areas:
+        'pagination pagination pagination button-bar'
+        'edit-selects edit-selects edit-selects edit-selects'
+        'edit-left edit-left edit-right edit-right';
+}
+
+.select_edit_themes {
+    grid-area: edit-themes;
+}
+
+.select_edit_types {
+    grid-area: edit-types;
+}
+
+.select_set_level {
+    grid-area: set-level;
+}
+
+.edit_poems_button_bar {
+    grid-area: button-bar;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-content: flex-start;
+}
+
+.edit_poem_title {
+    grid-area: poem-title;
+
+}
+
+.edit_poem,
+.edit_lesson_left,
+.edit_lesson_right {
+
+    border-radius: 3rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    /* width: calc(100% - 12rem);
+    display: grid;
+    height: calc(100vh - 22.3rem); */
+    box-shadow: 0.8rem 0.8rem 1.4rem var(--greyLight-2), -0.2rem -0.2rem 1.8rem var(--white);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+}
+
+.edit_lesson_left {
+    grid-area: edit-left;
+    margin-right: 1rem;
+}
+
+.edit_lesson_right {
+    grid-area: edit-right;
+    margin-left: 1rem;
+}
+
+/*
+.edit_notes {
+    grid-area: edit-notes;
+    border-radius: 3rem;
+    margin-left: 2rem;
+    
+    box-shadow: 0.8rem 0.8rem 1.4rem var(--greyLight-2), -0.2rem -0.2rem 1.8rem var(--white);
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+
+}
+*/
+.html_editor_container {
+
+    width: 30vw;
+}
+
+.edit_select_container {
+    grid-area: edit-selects;
+    width: calc(100% - 2.5rem);
+    height: calc(100% - 4rem);
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 0.7fr;
+    gap: 1rem;
+    grid-template-areas:
+        'edit-themes edit-types set-level';
+    align-items: start;
+    min-width: 0;
+    margin-left: 2.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+}
+
+.select_container {
+
+    margin-top: 3rem;
+    width: 12rem;
+    height: 2.5rem;
+    /*  border: none;
+    border-radius: 0.7rem;
+    font-size: 1.1rem;
+    padding-left: 2.8rem;
+    box-shadow: inset 0.2rem 0.2rem 0.5rem var(--greyLight-2), inset -0.2rem -0.2rem 0.5rem var(--white);
+    background: none;
+    color: var(--greyDark); */
+}
+
+.selects_container_grid {
+
+    width: 100%;
+    height: calc(100% - 4rem);
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 1fr 1fr 1.5fr 1fr;
+    gap: 1rem;
+    grid-template-areas:
+        'themes types poets levels'
+        'results results results results';
+    align-items: start;
+    min-width: 0;
+}
+
+.select_levels,
+.select_themes,
+.select_types,
+.select_poets {
+
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 0.7rem;
+    font-size: 1rem;
+    background: none;
+    color: var(--greyDark);
+
+}
+
+.results {
+    grid-area: results;
+    height: 100%;
+    overflow: auto;
+}
+
+.select_levels_container {
+    grid-area: levels;
+}
+
+.select_themes_container {
+    grid-area: themes;
+}
+
+.select_types_container {
+    grid-area: types;
+}
+
+.select_poets_container {
+    grid-area: poets;
+}
+
+.types_and_or,
+.themes_and_or {
+
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center
+}
+
+
+.result_wrapper {
+
+    break-inside: avoid;
+    font-size: 0.8rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.result_details {
+
+    font-size: 0.7rem;
+    margin-top: 0.3rem;
+}
+
+.details_italic {
+
+    font-style: italic;
+}
+
+
+.search_container {
+    display: flex;
+    align-items: center;
+
+}
+
+.search_input {
+
+    width: 12rem;
+    height: 2.5rem;
+    border: none;
+    border-radius: 0.7rem;
+    font-size: 1.1rem;
+    padding-left: 2.8rem;
+    box-shadow: inset 0.2rem 0.2rem 0.5rem var(--greyLight-2), inset -0.2rem -0.2rem 0.5rem var(--white);
+
+    background: none;
+    color: var(--greyDark);
+}
+
+.search_input::-moz-placeholder {
+    color: var(--greyLight-3);
+}
+
+.search_input:-ms-input-placeholder {
+    color: var(--greyLight-3);
+}
+
+.search_input::placeholder {
+    color: var(--greyLight-3);
+    /*  color: var(--greyDark-3);*/
+    text-shadow: none;
+}
+
+.search_input:focus {
+    outline: none;
+    box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+}
+
+.search_icon_wrapper {
+
+    height: 1.2rem;
+    position: absolute;
+    font-size: 1.2rem;
+    padding: 0 0.7rem;
+    display: flex;
+    color: var(--greyDark);
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.search_icon {
+
+    width: 1.5rem;
+    height: 1.5rem;
+
+}
+
+.modalHeader {
+    height: 50px;
+    overflow: hidden;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+
+.modalHeader .heading {
+    margin: 0;
+    padding: 10px;
+    color: #2c3e50;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+}
+
+.popup_container_outer {
+
+    height: calc(58vh);
+    overflow-y: auto;
+}
+
+.popup_container_inner {
+
+    overflow-x: hidden;
+    min-height: 0;
+    overflow-y: auto;
+    /*height: 100%; */
+    column-width: 25em;
+    max-width: calc(80vw);
+    background: transparent;
+
+}
+
+.poem_wrapper {
+
+    font-size: clamp(0.7em, 0.3em + 1vw, 0.9em);
+
+    /*    background: blue; */
+    display: grid;
+    grid-template-columns: 2em 3fr 1fr;
+
+}
+
+.poem-num p {
+
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+}
+
+.poem-titles p {
+
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+    cursor: pointer;
+
+}
+
+.poem_poet {
+
+    font-style: italic;
+
+}
+
+.terms_text h1 {
+    font-size: 1rem;
+}
+
+.terms_text h2 {
+    font-size: 0.9rem;
+}
+
+.terms_text p {
+    font-size: 0.8rem;
+}
+
+.poem_btn {
+    width: 2.0rem;
+    height: 2.0rem;
+    margin: 0.3rem;
+    margin-bottom: 0.5rem;
+    border-radius: 50%;
+    box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: var(--primary-dark);
+    transition: all 0.5s ease;
+}
+
+.poem_btn:active {
+    box-shadow: inset 0.2rem 0.2rem 0.5rem var(--greyLight-2), inset -0.2rem -0.2rem 0.5rem var(--white);
+    color: var(--primary-light);
+}
+
+.poem_btn:hover {
+    color: var(--primary-light);
+}
+
+.poem_btn .off {
+    position: absolute;
+    opacity: 0;
+    transition: all 0.2s linear;
+}
+
+.poem_btn .off.visibility {
+    opacity: 1;
+}
+
+.poem_btn .on {
+    position: absolute;
+    transition: all 0.2s linear;
+}
+
+.poem_btn .on.visibility {
+    opacity: 0;
+}
+
+.poem_btn img {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+.button-bar2 .poem_btn {
+    margin: 0.3rem;
+}
+
+.poem_btn_icon img {
+
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+.poem_btn_icon {
+    margin-bottom: -3px;
+    width: 1.2rem;
+    height: 1.2rem;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.poem_link {
+
+    color: var(--primary-dark);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.scormWrapper {
+    width: 100%;
+    height: 100%;
+    /*height: calc(100% - 2rem);
+     */
+
+
+
+}
+
+.scorm_container_outer {
+    width: 100%;
+    height: 100%;
+
+}
+
+.scorm_container_inner {
+
+    width: 100%;
+    /* height: 100%; */
+    height: calc(100% - 5rem);
+    overflow-y: auto;
+
+}
+
+.lesson_container_inner {
+
+    width: 100%;
+    /* height: 100%; */
+    height: calc(100% - 5rem);
+    overflow-y: auto;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        'lesson-poem lesson-quiz';
+}
+
+.lesson_container_outer {
+
+    width: 100%;
+    height: 100%;
+
+}
+
+.lesson_poem {
+
+    grid-area: lesson-poem;
+
+}
+
+.lesson_quiz {
+
+    grid-area: lesson-quiz;
+
+}

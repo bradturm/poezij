@@ -1,0 +1,36 @@
+.langSelect {
+    width: 100%;
+    color: rgba(255, 255, 255, 0.5);
+    color: red;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2001;
+    margin-top: 1rem;
+}
+
+.signIn {
+    width: 30rem;
+    color: rgba(255, 255, 255, 0.5);
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 2001;
+    margin-top: 1rem;
+    text-align: right;
+}
+
+.select {
+    text-align: center;
+}
+
+
+.langLink {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.signInLink {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}

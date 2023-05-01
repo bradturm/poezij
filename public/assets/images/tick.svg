@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><title>Text Selectable</title>
+<style type="text/css">
+	.st0{fill:#5b0eeb;}
+	.st1{fill:#ffffff;}
+</style>
+<circle class="st0" cx="32" cy="32" r="22"/>
+<g>
+	<path class="st1" d="M42.1,22.7c0.9,0.6,1.2,1.8,0.6,2.8L31.5,42.7c-0.3,0.5-0.9,0.9-1.5,0.9c0,0-0.1,0-0.1,0
+		c-0.6,0-1.1-0.2-1.5-0.7l-6.9-7.8c-0.7-0.8-0.6-2.1,0.2-2.8c0.8-0.7,2.1-0.6,2.8,0.2l5.1,5.8l9.7-15C39.9,22.4,41.2,22.1,42.1,22.7
+		z"/>
+</g>
+</svg>

@@ -1,0 +1,103 @@
+/* SIDENAV */
+
+
+.closeBtn {
+  cursor: pointer;
+  font-weight: 500;
+  padding: 0.5rem 0.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border: none;
+  border-radius: 1rem;
+  margin-top: 0.8rem;
+  margin-right: 0.8rem;
+  background: transparent;
+  /*
+  align-self: flex-end;
+  color: #2c3e50;
+  transition: all 0.25s ease;
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.06);
+  */
+}
+
+.closeBtn:hover {
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.04);
+}
+
+
+
+.sideNavOpen {
+  position: absolute;
+  background-color: whitesmoke;
+  height: 100%;
+  overflow: hidden;
+  transition-duration: 1s;
+  top: 10rem;
+  right: 0;
+  width: 25%;
+  border-right: solid 1px grey;
+  /* box-shadow: 4px 16px 20px rgba(151, 149, 149, 0.25); */
+}
+
+.sideNavClosed {
+  position: absolute;
+  background-color: whitesmoke;
+  height: 100%;
+  overflow: hidden;
+  opacity: 0;
+  transition-duration: 1s;
+  top: 10rem;
+  right: 0;
+  width: 0%;
+}
+
+.sideNavHeader {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  color: white;
+  font-weight: bold;
+  background-color: rgb(27, 27, 27);
+  cursor: pointer;
+}
+
+.sideNavList {
+  overflow: scroll;
+  height: 100%;
+  border-radius: 0px;
+}
+
+.sideNavListItem {
+  background-color: #fff;
+  color: rgb(56, 56, 56);
+  padding: 1rem;
+  font-size: 16px;
+  cursor: pointer;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-width: 1px 0px 1px 0px;
+}
+
+.sideNavListItem:hover {
+  background: var(--primary-color);
+  color: var(--white);
+  transition-duration: 150ms;
+  z-index: 10;
+  border-top: none;
+}
+
+@media only screen and (max-width: 650px) {
+  .sideNavOpen {
+    position: absolute;
+    right: 0;
+    width: 85%;
+  }
+
+  .sideNavClosed {
+    position: absolute;
+    right: 0;
+    width: 0%;
+  }
+}

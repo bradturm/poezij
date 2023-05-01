@@ -1,0 +1,8 @@
+.notes {
+    overflow: auto;
+    text-align: start;
+    align-self: end;
+    max-height: 100%;
+    font-size: 0.8rem;
+    column-count: 3;
+}

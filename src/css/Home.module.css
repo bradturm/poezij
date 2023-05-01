@@ -1,0 +1,121 @@
+.home_page_grid {
+    max-height: min(90vh, 200rem);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 7rem 1fr;
+    grid-template-areas:
+        'latest welcome welcome sidebar '
+        'latest day day sidebar ';
+}
+
+.sidebar {
+    grid-area: sidebar;
+
+}
+
+.poem_day_container {
+    grid-area: day;
+}
+
+/* grid containing poem (titles, lines, buttons and pagination) */
+
+.poem_grid {
+    grid-area: poem-block;
+    border-radius: 3rem;
+    margin-left: 2rem;
+    /*width: calc(100% - 12rem);*/
+    width: calc(100% - 8rem);
+    display: grid;
+    height: calc(100vh - 22.3rem);
+    box-shadow: 0.8rem 0.8rem 1.4rem var(--greyLight-2), -0.2rem -0.2rem 1.8rem var(--white);
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    grid-template-rows: 5rem 1fr 5rem;
+    grid-template-columns: 2rem 1fr 2rem;
+    grid-template-areas:
+        'link-btn titles-block btns1'
+        'lines lines lines'
+        'pagination pagination pagination';
+}
+
+
+.poem_btn_icon img {
+
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+.poem_btn_icon {
+    margin-bottom: -3px;
+    width: 1.2rem;
+    height: 1.2rem;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.poem_link {
+
+    color: var(--primary-dark);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.dashboard {
+    grid-area: dashboard;
+    box-shadow: 0.8rem 0.8rem 1.4rem var(--greyLight-2), -0.2rem -0.2rem 1.8rem var(--white);
+    padding: 1rem;
+    border-radius: 2rem;
+    margin-top: 1rem;
+    margin-left: 2rem;
+    width: calc(100% - 6rem);
+}
+
+.latest {
+    grid-area: latest;
+    box-shadow: 0.8rem 0.8rem 1.4rem var(--greyLight-2), -0.2rem -0.2rem 1.8rem var(--white);
+    padding: 1rem;
+    border-radius: 2rem;
+    margin-top: 1rem;
+    margin-left: 2rem;
+    width: calc(100% - 6rem);
+}
+
+.welcome {
+    grid-area: welcome;
+    box-shadow: 0.8rem 0.8rem 1.4rem var(--greyLight-2), -0.2rem -0.2rem 1.8rem var(--white);
+    padding: 1rem;
+    border-radius: 2rem;
+    margin-top: 1rem;
+
+
+}
+
+
+.no_poem_grid {
+    grid-area: poem-block;
+    border-radius: 3rem;
+    margin-left: 2rem;
+    width: calc(100% - 12rem);
+    display: grid;
+    height: calc(100vh - 22.3rem);
+    box-shadow: 0.8rem 0.8rem 1.4rem var(--greyLight-2), -0.2rem -0.2rem 1.8rem var(--white);
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    text-align: center;
+}
+
+.more-from {
+    border: none;
+    border-radius: 1rem;
+    font-size: 0.8rem;
+    padding-left: 1.4rem;
+    box-shadow: inset 0.2rem 0.2rem 0.5rem var(--greyLight-2), inset -0.2rem -0.2rem 0.5rem var(--white);
+    background: none;
+    margin-bottom: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}

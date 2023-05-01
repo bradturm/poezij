@@ -1,0 +1,36 @@
+.commentary {
+    /*   margin-top: 0.5rem; */
+    overflow: auto;
+    justify-self: self-end;
+    text-align: start;
+    align-self: end;
+    height: calc(100vh - 15.3rem);
+}
+
+.commentary_title {
+
+    font-weight: bold;
+    font-size: 1.1em;
+    text-align: center;
+    margin-bottom: 0.3em;
+}
+
+.commentary_intro {
+
+    text-align: center;
+    font-size: 1em;
+    margin-bottom: 0.5rem;
+    font-style: italic;
+
+}
+
+.commentary_body {
+    /* column-count: 3;
+   max-width: 800px;
+   margin-top: 0.5rem;*/
+    font-size: 0.8em;
+    /*  column-width: 17rem; */
+    margin: 0 auto;
+    line-height: 1.4;
+
+}

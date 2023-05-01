@@ -1,0 +1,106 @@
+.pagination {
+
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+    border-radius: 0.25rem;
+
+    margin-top: 0;
+    /*    margin-bottom: 1rem; */
+    margin-bottom: 0;
+}
+
+.page-item {}
+
+.page-item:first-child .page-link {
+    margin-left: 0;
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+}
+
+.page-link {
+    position: relative;
+    display: block;
+    padding: 0.5rem 0.75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: #007bff;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+}
+
+/*
+.page-item.active .page-link {
+      z-index: 1;  REMOVED THIS SO IT DOES NOT SHOW THROUGH - CAUSES OTHER ISSUES?! 
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+*/
+.page-item.active .poem_btn {
+    color: #fff;
+    background-color: var(--primary-dark);
+    /*  border-color: #007bff;*/
+}
+
+
+.poem_btn {
+    width: 1.8rem;
+    height: 1.8rem;
+    margin-right: 0.8rem;
+    border-radius: 50%;
+    box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: var(--primary-dark);
+    transition: all 0.5s ease;
+}
+
+/* 
+.poem_btn:active {
+    box-shadow: inset 0.2rem 0.2rem 0.5rem var(--greyLight-2), inset -0.2rem -0.2rem 0.5rem var(--white);
+    color: var(--primary-light);
+}
+*/
+.poem_btn:hover {
+    color: var(--primary-light);
+}
+
+.poem_btn .off {
+    position: absolute;
+    opacity: 0;
+    transition: all 0.2s linear;
+}
+
+/* */
+.poem_btn .off.visibility {
+    opacity: 1;
+}
+
+.poem_btn .on {
+    position: absolute;
+    transition: all 0.2s linear;
+}
+
+.poem_btn .on.visibility {
+    opacity: 0;
+}
+
+.poem_btn.hidden {
+    opacity: 0;
+}
+
+
+.poem_btn img {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+a {
+
+    text-decoration: none;
+
+}

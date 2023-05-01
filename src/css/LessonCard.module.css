@@ -1,0 +1,211 @@
+/*body {
+    background: #111;
+    font-family: 'Open Sans', sans-serif;
+ }
+  */
+.cta-background {
+    background-size: cover;
+    background-position: center center;
+    bottom: 0;
+    filter: blur(50px);
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.lesson_num {
+
+    position: absolute;
+    top: 0;
+    left: 1rem;
+    color: white;
+}
+
+.lesson_level {
+
+    position: absolute;
+    top: 0;
+    right: 1rem;
+    color: white;
+    font-weight: bold;
+}
+
+.lesson_lock_star {
+
+    position: absolute;
+    top: 3rem;
+    right: 1rem;
+    width: 2rem;
+    height: 2rem;
+}
+
+.lock_star_img {
+
+    width: 2rem;
+    height: 2rem;
+}
+
+
+
+.cta {
+    /*background: #333;*/
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 70%);
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.2);
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    width: 300px;
+}
+
+.cta:hover img {
+    top: -30%;
+    filter: brightness(50%);
+}
+
+.cta:hover .text {
+    top: 0;
+}
+
+
+.cover {
+
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 70%);
+    width: 100%;
+    transition: 0.8s ease-in-out;
+    /*background: red;
+    */
+}
+
+.cta:hover .cover {
+    background: transparent;
+    width: 100%;
+}
+
+.cta img {
+    bottom: 0;
+    filter: brightness(100%);
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 0.8s ease-in-out;
+    width: 115%;
+}
+
+.cta .text {
+    /*  bottom: -40%;
+     padding: 15px; */
+    top: 120px;
+    position: absolute;
+    transition: 0.8s ease-in-out;
+
+    padding-right: 5px;
+}
+
+.cta .text h2 {
+    color: #fff;
+    display: inline-block;
+    font-weight: 300;
+    margin-bottom: 5px;
+    position: relative;
+    padding-left: 10px;
+    padding-right: 5px;
+}
+
+.cta .text p {
+    color: #fff;
+    font-weight: 300;
+    padding-left: 10px;
+}
+
+.lesson-progress-container {
+    grid-area: pagination;
+
+}
+
+.lesson-progress {
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+    border-radius: 0.25rem;
+    margin-top: 0;
+    margin-bottom: 0;
+
+}
+
+/*
+.poem_btn {
+    width: 2rem;
+    height: 2rem;
+    margin: 0.3rem;
+    margin-bottom: 0.5rem;
+    border-radius: 50%;
+    box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: var(--primary-dark);
+    transition: all 0.5s ease;
+}
+*/
+
+.poem_btn {
+    width: 1.2rem;
+    height: 1.2rem;
+    margin: 0.15rem;
+    margin-bottom: 0;
+    border-radius: 50%;
+    box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: var(--primary-dark);
+    transition: all 0.5s ease;
+}
+
+.poem_btn:active {
+    box-shadow: inset 0.2rem 0.2rem 0.5rem var(--greyLight-2), inset -0.2rem -0.2rem 0.5rem var(--white);
+    color: var(--primary-light);
+}
+
+.poem_btn:hover {
+    color: var(--primary-light);
+}
+
+.poem_btn .off {
+    position: absolute;
+    opacity: 0;
+    transition: all 0.2s linear;
+}
+
+.poem_btn .off.visibility {
+    opacity: 1;
+}
+
+.poem_btn .on {
+    position: absolute;
+    transition: all 0.2s linear;
+}
+
+.poem_btn .on.visibility {
+    opacity: 0;
+}
+
+.poem_btn img {
+    width: 1.2rem;
+    height: 1.2rem;
+}

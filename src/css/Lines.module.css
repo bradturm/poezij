@@ -1,0 +1,196 @@
+.container-both-scroll,
+.container_both_scroll,
+.container-both-paged,
+.container_both_paged {
+    /* */
+    font-size: clamp(0.83em, 0.3em + 1vw, 1em);
+
+    /*   background: pink;*/
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+    min-height: 0;
+
+    margin: 0;
+    grid-template-rows: calc(100vh - 24.7rem);
+    max-width: 50rem;
+    margin-left: auto;
+    margin-right: auto;
+
+    /*
+25px calc(100vh - 50px); 
+https://stackoverflow.com/questions/56308095/overflow-scroll-breaks-in-nested-grid
+
+    */
+
+}
+
+.show_one {
+
+    grid-template-columns: 1fr;
+    justify-content: center;
+    /*  grid-template-columns: 0.5fr 1fr 0.5fr;
+      grid-template-areas:
+        '. line-container .'; */
+
+}
+
+
+.container-both-paged,
+.container_both_paged {
+    grid-template-rows: calc(100vh - 25.7rem);
+}
+
+
+.container-both-paged {
+
+    z-index: 1000;
+
+}
+
+/*
+.container-both-scroll {
+
+     
+    visibility: hidden;
+
+}
+*/
+.hidden {
+
+    visibility: hidden;
+
+}
+
+.no_select {
+    -webkit-user-select: none;
+    /* Safari */
+    -ms-user-select: none;
+    /* IE 10 and IE 11 */
+    user-select: none;
+    /* Standard syntax */
+}
+
+.full_height {
+
+    /*grid-template-rows: calc(100vh - 16.3rem);*/
+    grid-template-rows: calc(100vh - 21.6rem);
+
+}
+
+.day_height {
+
+    /*grid-template-rows: calc(100vh - 16.3rem);*/
+    grid-template-rows: calc(100vh - 31rem);
+
+}
+
+.lines-container-outer {
+    /* grid-area: line-container; */
+    max-height: 100%;
+    overflow-y: hidden;
+    min-height: 0;
+    /* width: clamp(80%, 50%, 500px);
+    width: clamp(50%, 50%, 100%);*/
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.lines-container-inner {
+
+    overflow-x: hidden;
+    min-height: 0;
+    overflow-y: auto;
+    height: 100%;
+}
+
+.lines-container-inner::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari and Opera */
+}
+
+
+/*
+.no-scroll {
+   
+    padding-right: 17px;
+    
+    -ms-overflow-style: none;
+    IE and Edge
+    scrollbar-width: none;
+     Firefox 
+}
+*/
+/*
+.no-scroll::-webkit-scrollbar {
+    display: none;
+     Chrome, Safari and Opera 
+}
+*/
+
+/*
+On varying font size - at about 13 min. in 
+https://www.youtube.com/watch?v=VQraviuwbzU
+
+*/
+
+.line-wrapper-fry {
+
+    font-size: clamp(0.7em, 0.3em + 1vw, 0.9em);
+
+    /*   background: blue; */
+    display: grid;
+    grid-template-columns: 2em auto;
+}
+
+.line-wrapper-nl {
+
+    font-size: clamp(0.7em, 0.3em + 1vw, 0.9em);
+
+    /*    background: blue;*/
+    display: grid;
+    grid-template-columns: auto 2em;
+}
+
+.line-wrapper-fry p {
+
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+
+}
+
+.line-wrapper-nl p {
+
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+
+}
+
+.line-num-fry {
+
+    /*   background: red; */
+    justify-self: start;
+    color: var(--clr-line-numbers);
+}
+
+.line-num-nl {
+
+    /*    background: yellow; */
+    justify-self: end;
+    color: var(--clr-line-numbers);
+
+}
+
+.line-normal {
+
+    text-indent: -2rem;
+    padding-left: 2rem;
+}
+
+.line-prose {
+
+    text-indent: 0;
+    padding-left: 0;
+}

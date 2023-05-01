@@ -1,0 +1,235 @@
+.container {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    z-index: 1050;
+}
+
+.inner {
+    background: rgba(255, 255, 255, 0.3);
+    padding-top: 1em;
+    padding-bottom: 2em;
+    padding-left: 3em;
+    padding-right: 3em;
+    min-height: 320px;
+    border-radius: 20px;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+    z-index: 9999;
+    box-sizing: content-box;
+}
+
+.inner h3 {
+    font-weight: 500;
+    color: #fff;
+    opacity: 0.7;
+    font-size: 1.4rem;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.titleSelect {
+    width: 50px;
+}
+
+.formText {
+
+    font-size: 0.8rem;
+    margin-top: 12px;
+}
+
+.inner a {
+    text-decoration: none;
+    color: blue;
+    font-size: 0.8rem;
+}
+
+.inner a:hover {
+    text-shadow: 2px 2px 6px #00000040;
+}
+
+.inner a:active {
+    text-shadow: none;
+}
+
+.formControl {
+    background: transparent;
+    width: 200px;
+    padding: 1em;
+    margin-top: 1em;
+    border: none;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5000px;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    box-shadow: 4px 4px 60px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.select-style select:focus {
+    outline: none;
+}
+
+.formSelect {
+
+    background: rgba(218, 204, 204, 0.8);
+
+}
+
+.inner select {
+
+    padding: 1em;
+    margin-top: 1em;
+    border: none;
+}
+
+
+.isInvalid {
+
+    border: 1px solid rgba(255, 0, 0, 0.8);
+}
+
+.invalidFeedback {
+
+    font-size: 0.7rem;
+}
+
+.link {
+
+    font-size: 0.8rem;
+    color: blue;
+    cursor: pointer;
+}
+
+.label {
+
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.titleSelect {
+    width: 50px;
+}
+
+
+
+.form-control:hover {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 4px 4px 60px 8px rgba(0, 0, 0, 0.2);
+}
+
+.form-control[type=email]:focus,
+.form-control[type=password]:focus {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 4px 4px 60px 8px rgba(0, 0, 0, 0.2);
+}
+
+.form-control[type=button] {
+    margin-top: 10px;
+    width: 150px;
+    font-size: 1rem;
+}
+
+.form-control[type=button]:hover {
+    cursor: pointer;
+}
+
+.form-control[type=button]:active {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.inner:hover {
+    margin: 4px;
+}
+
+::-moz-placeholder {
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+:-ms-input-placeholder {
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+::placeholder {
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.drop {
+    background: rgba(255, 255, 255, 0.3);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 10px 10px 60px -8px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    transition: all 0.2s ease;
+}
+
+.drop-1 {
+    height: 80px;
+    width: 80px;
+    top: -20px;
+    left: -40px;
+    z-index: -1;
+}
+
+.drop-2 {
+    height: 80px;
+    width: 80px;
+    bottom: -30px;
+    right: -10px;
+}
+
+.drop-3 {
+    height: 100px;
+    width: 100px;
+    bottom: 120px;
+    right: -50px;
+    z-index: -1;
+}
+
+.drop-4 {
+    height: 120px;
+    width: 120px;
+    top: -60px;
+    right: -60px;
+}
+
+.drop-5 {
+    height: 60px;
+    width: 60px;
+    bottom: 170px;
+    left: 90px;
+    z-index: -1;
+}
+
+a,
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}

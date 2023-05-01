@@ -1,0 +1,122 @@
+/*  SEARCH */
+.searchOpen {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  z-index: 15;
+  top: 5rem;
+  right: 0;
+  height: 100%;
+  width: 25%;
+  padding: 1rem;
+  background-color: whitesmoke;
+  transition-duration: 1s;
+  box-shadow: 0px 10px 10px rgba(37, 26, 26, 0.3);
+}
+
+.searchClosed {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  z-index: 15;
+  top: 5rem;
+  right: 0;
+  height: 100%;
+  width: 0px;
+  opacity: 0;
+  transition-duration: 1s;
+}
+
+.searchInput {
+  width: 100%;
+  line-height: 50px;
+  text-align: center;
+  font-size: 1em;
+  border-radius: 0.25rem;
+  border: none;
+}
+
+.searchResults {
+  width: 100%;
+  margin-top: 10px;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.searchResultsHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0rem;
+}
+
+.searchContent {
+  padding: 0.25rem;
+  text-align: left;
+}
+
+.searchResult {
+
+  cursor: pointer;
+
+}
+
+.searchResultText {
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+
+  line-height: 1.2rem;
+  /* Height taken by one line */
+  max-height: 3.6rem;
+  /* (line-height * numberOfLineYouWant) In this case we want 2 lines so we will multiply lineHeight by 2 so 16 * 2 = 32 => 32px */
+  /* Remember if you have more height then it'll render new line so match height of container with => lineHeight * numberOfLines */
+
+
+  /*white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 5rem;
+*/
+}
+
+.searchLink {
+  font-size: 1.2rem;
+  font-weight: light;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.5rem;
+  cursor: pointer;
+  margin: 1rem 0rem;
+  border-radius: 0.25rem;
+  text-align: center;
+}
+
+.exitIcon:hover {
+  transform: scale(1.2) rotateZ(90deg);
+  transition-duration: 0.3s;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 650px) {
+  .searchOpen {
+    width: 85%;
+  }
+
+  .searchResultsHeader {
+    font-size: 0.75em;
+  }
+
+  .searchInput {
+    line-height: 50px;
+    text-align: center;
+    font-size: 0.75em;
+  }
+}

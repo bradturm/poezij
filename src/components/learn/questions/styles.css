@@ -1,0 +1,227 @@
+/*.activities_container {
+  margin: 0;
+  width: 100%;
+}
+*/
+.questionWrapper {
+
+  display: grid;
+  grid-template-rows: 1fr 2rem;
+  grid-template-areas:
+    'activities'
+    'navigation';
+}
+
+.questionWrapperBody {
+  grid-area: activities;
+  margin-top: 0.5rem;
+  overflow: auto;
+  text-align: start;
+  align-self: end;
+  height: calc(100vh - 17rem);
+  font-size: 0.8rem;
+}
+
+.questionBtnContainer {
+
+  grid-area: navigation;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+
+}
+
+.poem_btn {
+  width: 2.0rem;
+  height: 2.0rem;
+  margin-bottom: 0.5rem;
+  border-radius: 50%;
+  box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: var(--primary-dark);
+  transition: all 0.5s ease;
+}
+
+.poem_btn img {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+
+
+.activities_container .startQuizWrapper {
+  margin-top: 10px;
+}
+
+.activities_container .btn {
+  margin-bottom: 0;
+  font-weight: 600;
+  text-align: center;
+  padding: 11px 12px;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+
+.activities_container .questionWrapper .btn {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: 1px solid #e8e8e8;
+  ;
+  font-size: 0.9rem;
+  display: block;
+  white-space: normal;
+  text-align: unset;
+}
+
+.activities_container .questionWrapper .btn.correct {
+  background: green;
+  color: white;
+}
+
+.activities_container .questionModal .alert {
+  padding: 20px;
+  margin-bottom: 21px;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  color: #fff;
+}
+
+.activities_container .correct {
+  background: green;
+}
+
+.activities_container .incorrect {
+  background: red;
+  color: white;
+}
+
+.activities_container .questionWrapper img {
+  width: 90%;
+}
+
+.activities_container .answerBtn {
+  width: 90%;
+}
+
+.activities_container .selected {
+  background: #007bff;
+  color: white;
+}
+
+.activities_container .startQuizWrapper .startQuizBtn {
+  font-size: 0.9rem;
+  border-radius: 2px;
+  line-height: 1.35135;
+  color: rgba(0, 0, 0, 0.65);
+  background-color: #fff;
+  border: 1px solid #d9d9d9;
+}
+
+.activities_container .result_answer_wrapper {
+  margin-bottom: 20px;
+  border: 1px solid #e8e8e8;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-size: 0.8rem;
+}
+
+.activities_container .result_answer_wrapper p {
+  background-color: #fafafa;
+  ;
+  opacity: 0.8;
+  color: rgba(0, 0, 0, 0.9);
+  margin: 0px;
+  padding: 10px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  font-size: 0.8rem;
+}
+
+.activities_container .result_answer_wrapper .explanation {
+  padding: 20px;
+  margin: 0px 20px 20px 20px;
+  border: 1px solid #e8e8e8;
+}
+
+.activities_container .result_answer_wrapper .tag_container {
+  margin: 20px;
+}
+
+.activities_container .result_answer {
+  padding: 0px 20px;
+}
+
+.activities_container .quiz_synopsis {
+  margin: 15px 0px;
+  font-size: 0.8rem;
+}
+
+.activities_container .quiz_result_filter {
+  overflow: hidden;
+  width: 120px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  background-color: #fefefe;
+  margin-bottom: 10px;
+  border: 1px solid #e8e8e8;
+}
+
+.activities_container .quiz_result_filter select {
+  background: transparent;
+  border: none;
+  font-size: 0.8rem;
+  padding: 5px;
+  width: 100%;
+  height: 30px;
+  border: 1px solid #ffffff;
+}
+
+.activities_container .tag_container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.activities_container .selection_tag,
+.activities_container .number_of_selection {
+  padding: 7px;
+  border-radius: 5px;
+  color: #ffffff;
+}
+
+.activities_container .number_of_selection {
+  background: #673AB7;
+  margin-left: 5px;
+}
+
+.activities_container .selection_tag.single {
+  background: #3F51B5;
+}
+
+.activities_container .selection_tag.multiple {
+  background: #FF9800;
+}
+
+.activities_container .selection_tag.segment {
+  background: #3db4b9;
+  margin-left: 5px;
+}
+
+.activities_container .questionBtnContainer {
+  display: flex;
+  justify-content: space-between;
+}

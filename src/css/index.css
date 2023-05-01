@@ -1,0 +1,312 @@
+:root {
+  --primary-light: #8abdff;
+  --primary: #6d5dfc;
+  --primary-dark: #5b0eeb;
+  --app-background: #e4ebf5;
+  --white: #FFFFFF;
+  --greyLight-1: #E4EBF5;
+  --greyLight-2: #c8d0e7;
+  --greyLight-3: #bec8e4;
+  --greyDark: #9baacf;
+  --highlight: #eab676;
+  --primary-font: pt_sansregular;
+  --navbar-font: pt_sansbold;
+
+  /*  https://www.1001fonts.com/scriptina-font.html  */
+  --learn-header-font: scriptinaregular;
+}
+
+@font-face {
+  font-family: 'pt_sansbold';
+  src: url('../fonts/ptsans-bold-webfont.woff2') format('woff2'),
+    url('../fonts/ptsans-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'pt_sansbold_italic';
+  src: url('../fonts/ptsans-bolditalic-webfont.woff2') format('woff2'),
+    url('../fonts/ptsans-bolditalic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'pt_sansitalic';
+  src: url('../fonts/ptsans-italic-webfont.woff2') format('woff2'),
+    url('../fonts/ptsans-italic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'pt_sansregular';
+  src: url('../fonts/ptsans-regular-webfont.woff2') format('woff2'),
+    url('../fonts/ptsans-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+/*
+Scriptina font - free for commercial use:
+https://www.1001fonts.com/scriptina-font.html#license
+*/
+
+@font-face {
+  font-family: 'scriptinaregular';
+  src: url('../fonts/scriptin-webfont.woff2') format('woff2'),
+    url('../fonts/scriptin-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+body {
+  margin: 0;
+  /* Fallback font for old browsers */
+  font-family: pt_sansregular, sans-serif;
+  font-family: var(--primary-font);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--app-background);
+}
+
+/*
+* {
+  margin: 0px; 
+   padding: 0px; 
+}
+*/
+
+*,
+::after,
+::before {
+  box-sizing: content-box;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+
+figure .image {
+  margin: 0;
+  margin-left: 0;
+  margin-right: 0;
+
+}
+
+figure figcaption {
+
+  margin-top: -1rem;
+  margin-left: 0;
+  font-size: 0.7rem;
+  font-style: italic;
+}
+
+a.lightbox img {
+  /* height: 150px; */
+  border: 3px solid white;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, .3);
+  /*  margin: 94px 20px 20px 20px; */
+  margin: 20px 20px 20px 0;
+  width: 95%;
+}
+
+/* Styles the lightbox, removes it from sight and adds the fade-in transition */
+
+.lightbox-target {
+  position: fixed;
+  top: -100%;
+  width: 100%;
+  background: rgba(0, 0, 0, .7);
+  width: 100%;
+  opacity: 0;
+  -webkit-transition: opacity .5s ease-in-out;
+  -moz-transition: opacity .5s ease-in-out;
+  -o-transition: opacity .5s ease-in-out;
+  transition: opacity .5s ease-in-out;
+  overflow: hidden;
+  z-index: 10000;
+}
+
+/* Styles the lightbox image, centers it vertically and horizontally, adds the zoom-in transition and makes it responsive using a combination of margin and absolute positioning */
+
+.lightbox-target img {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-height: 0%;
+  max-width: 0%;
+  border: 3px solid white;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, .3);
+  box-sizing: border-box;
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+
+/* Styles the close link, adds the slide down transition */
+
+a.lightbox-close {
+  display: block;
+  width: 50px;
+  height: 50px;
+  box-sizing: border-box;
+  background: transparent;
+  color: black;
+  text-decoration: none;
+  position: absolute;
+  top: -80px;
+  right: 0;
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+
+/* Provides part of the "X" to eliminate an image from the close link */
+
+a.lightbox-close:before {
+  content: "";
+  display: block;
+  height: 25px;
+  width: 3px;
+  background: white;
+  position: absolute;
+  left: 26px;
+  top: 10px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* Provides part of the "X" to eliminate an image from the close link */
+
+a.lightbox-close:after {
+  content: "";
+  display: block;
+  height: 25px;
+  width: 3px;
+  background: white;
+  position: absolute;
+  left: 26px;
+  top: 10px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+/* Uses the :target pseudo-class to perform the animations upon clicking the .lightbox-target anchor */
+
+.lightbox-target:target {
+  opacity: 1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.lightbox-target:target img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.lightbox-target:target a.lightbox-close {
+  top: 0px;
+}
+
+.ck.ck-content h3.category {
+  font-family: 'Bebas Neue';
+  font-size: 20px;
+  font-weight: bold;
+  color: #d1d1d1;
+  letter-spacing: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.ck.ck-content p.info-box {
+  padding: 1.2em 2em;
+  border: 1px solid #e91e63;
+  border-left: 10px solid #e91e63;
+  border-radius: 5px;
+  margin: 1.5em;
+}
+
+.ck.ck-content span.marker {
+  background: yellow;
+}
+
+.ck.ck-content span.spoiler {
+  background: #000;
+  color: #000;
+}
+
+.ck.ck-content span.spoiler:hover {
+  background: #000;
+  color: #fff;
+}
+
+
+
+/* styling for the lesson slider */
+
+.react-slideshow-container {
+
+  height: calc(100vh - 7rem);
+}
+
+
+.react-slideshow-wrapper.slide {
+
+  height: 100%;
+}
+
+.react-slideshow-container+ul.indicators .each-slideshow-indicator:before {
+  background: var(--primary-dark) !important;
+}
+
+
+/* ----------------------------- */
+
+.select__control {
+
+  border-width: 0;
+  background-color: transparent;
+
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.highlight {
+
+  background-color: var(--highlight);
+}

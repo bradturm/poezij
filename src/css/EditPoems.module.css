@@ -1,0 +1,51 @@
+@media (min-width: 40em) {
+
+    .edit_poems_grid {
+        display: grid;
+        gap: 1.5rem;
+        grid-auto-columns: 1fr;
+        grid-template-rows: 5rem 5rem 1fr;
+        grid-template-columns: 50% 50%;
+        grid-template-areas:
+            'one two'
+            'three four'
+            'five four';
+
+        padding-block: 2rem;
+        width: min(95%, 130rem);
+        margin-inline: auto;
+        background: lightblue;
+        /*height: min(95vh, 75rem);*/
+    }
+}
+
+.poem_title {
+
+    grid-area: one;
+}
+
+.button_bar {
+
+    grid-area: two;
+}
+
+
+.edit_poems_grid {
+    display: grid;
+}
+
+.edit_poem {
+    grid-area: five;
+}
+
+.edit_notes {
+
+    grid-area: four;
+    width: 100%;
+}
+
+.type-input-container {
+    grid-area: three;
+    z-index: 10000;
+    max-width: 200px;
+}

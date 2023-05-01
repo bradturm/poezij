@@ -1,0 +1,109 @@
+.no_poem_grid {
+    grid-area: poem-block;
+    border-radius: 3rem;
+    margin-left: 2rem;
+    width: calc(100% - 12rem);
+    display: grid;
+    height: calc(100vh - 22.3rem);
+    box-shadow: 0.8rem 0.8rem 1.4rem var(--greyLight-2), -0.2rem -0.2rem 1.8rem var(--white);
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    text-align: center;
+}
+
+.container {
+
+    display: flex;
+    flex-direction: column;
+}
+
+.closeBtn {
+    cursor: pointer;
+    font-weight: 500;
+    padding: 0.5rem 0.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    position: absolute;
+    right: 2rem;
+    top: 3.2rem;
+    border: none;
+    border-radius: 1rem;
+    margin-top: 0.8rem;
+    margin-right: 0.8rem;
+    background: transparent;
+    /*
+    align-self: flex-end;
+    color: #2c3e50;
+    transition: all 0.25s ease;
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.06);
+    */
+}
+
+.modalHeader {
+    height: 50px;
+    overflow: hidden;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+
+.modalHeader .heading {
+    margin: 0;
+    padding: 10px;
+    color: #2c3e50;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+}
+
+.setting {
+
+    margin-top: 1rem;
+}
+
+.btn {
+    width: 10rem;
+    height: 2.5rem;
+    border-radius: 0.7rem;
+    border: none;
+    box-shadow: 0.2rem 0.2rem 0.4rem var(--greyLight-2), -0.13rem -0.13rem 0.3rem var(--white);
+    justify-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn_primary {
+    background: var(--primary);
+    box-shadow: inset 0.2rem 0.2rem 1rem var(--primary-light), inset -0.2rem -0.2rem 1rem var(--primary-dark), 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+    color: var(--greyLight-1);
+    align-self: center;
+    margin-top: 4rem;
+}
+
+.btn_primary:hover {
+    color: var(--white);
+}
+
+.btn_primary:active {
+    box-shadow: inset 0.2rem 0.2rem 1rem var(--primary-dark), inset -0.2rem -0.2rem 1rem var(--primary-light);
+}
+
+.btn_secondary {
+    color: var(--greyDark);
+}
+
+.btn_secondary:hover {
+    color: var(--primary);
+}
+
+.btn_secondary:active {
+    box-shadow: inset 0.2rem 0.2rem 0.5rem var(--greyLight-2), inset -0.2rem -0.2rem 0.5rem var(--white);
+}
+
+.btn p {
+    font-size: 1.1rem;
+}

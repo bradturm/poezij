@@ -1,0 +1,342 @@
+/* main grid for the poems page*/
+
+.lesson_page_grid {
+    height: calc(100% - 5rem);
+    max-height: min(90vh, 200rem);
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 9rem 0.3fr;
+    grid-template-rows: 7rem calc(100vh - 12.3rem);
+    grid-template-areas:
+        'poem-block audio-player btns2'
+        'poem-block sidebar sidebar';
+}
+
+/* grid containing poem (titles, lines, buttons and pagination) */
+
+.lesson_grid {
+    grid-area: poem-block;
+    border-radius: 3rem;
+    margin-left: 2rem;
+    width: calc(100% - 12rem);
+    display: grid;
+    height: calc(100vh - 22.3rem);
+    box-shadow: 0.8rem 0.8rem 1.4rem var(--greyLight-2), -0.2rem -0.2rem 1.8rem var(--white);
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    grid-template-rows: 5rem 1fr 5rem;
+    grid-template-columns: 2rem 1fr 2rem;
+    grid-template-areas:
+        'link-btn titles-block btns1'
+        'lines lines lines'
+        'pagination pagination pagination';
+}
+
+/* components for poem grid */
+
+.link_btn {
+    grid-area: link-btn;
+}
+
+.titles-block {
+    grid-area: titles-block;
+}
+
+.button-bar1 {
+    grid-area: btns1;
+    justify-self: end;
+}
+
+.lines {
+    grid-area: lines;
+}
+
+.pagedLines {
+    grid-area: lines;
+}
+
+.pagination {
+    grid-area: pagination;
+    justify-self: self-end;
+    padding-top: 1rem;
+}
+
+/* components for main grid of the poems page */
+
+.audio-player {
+    grid-area: audio-player;
+}
+
+.button-bar2 {
+    grid-area: btns2;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-content: flex-start;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    margin-right: 2rem;
+}
+
+.notes {
+    grid-area: notes;
+    box-shadow: 0.8rem 0.8rem 1.4rem var(--greyLight-2), -0.2rem -0.2rem 1.8rem var(--white);
+    padding: 1rem;
+    border-radius: 2rem;
+    margin-top: 1rem;
+    margin-left: 2rem;
+    width: calc(100% - 6rem);
+}
+
+.no_poem_grid {
+    grid-area: poem-block;
+    border-radius: 3rem;
+    margin-left: 2rem;
+    width: calc(100% - 12rem);
+    display: grid;
+    height: calc(100vh - 22.3rem);
+    box-shadow: 0.8rem 0.8rem 1.4rem var(--greyLight-2), -0.2rem -0.2rem 1.8rem var(--white);
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    text-align: center;
+}
+
+/* pop-ups */
+
+.popup_background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.poem_list_popup {
+    width: 60vw;
+    height: 60vh;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.activities {
+    /*grid-area: six;
+    overflow: auto; */
+    /*height: calc(100vh - 12.3rem);*/
+    height: calc(100vh - 14.3rem);
+    justify-self: self-end;
+    text-align: start;
+    align-self: end;
+    /*max-height: 80%;*/
+    box-shadow: 0.8rem 0.8rem 1.4rem var(--greyLight-2), -0.2rem -0.2rem 1.8rem var(--white);
+    padding: 1rem;
+    border-radius: 2rem;
+
+}
+
+.more-from {
+    border: none;
+    border-radius: 1rem;
+    font-size: 0.8rem;
+    padding-left: 1.4rem;
+    box-shadow: inset 0.2rem 0.2rem 0.5rem var(--greyLight-2), inset -0.2rem -0.2rem 0.5rem var(--white);
+    background: none;
+    margin-bottom: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+/*
+.poem {
+    font-size: var(--fs-400);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 2.5rem 3.75rem 3rem -3rem hsl(var(--clr-secondary-400) / 0.25);
+}
+*/
+/* small round buttons on poem page */
+
+.poem_btn {
+    width: 2.0rem;
+    height: 2.0rem;
+    margin-bottom: 0.5rem;
+    border-radius: 50%;
+    box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: var(--primary-dark);
+    transition: all 0.5s ease;
+}
+
+.poem_btn:active {
+    box-shadow: inset 0.2rem 0.2rem 0.5rem var(--greyLight-2), inset -0.2rem -0.2rem 0.5rem var(--white);
+    color: var(--primary-light);
+}
+
+.poem_btn:hover {
+    color: var(--primary-light);
+}
+
+.poem_btn .off {
+    position: absolute;
+    opacity: 0;
+    transition: all 0.2s linear;
+}
+
+.poem_btn .off.visibility {
+    opacity: 1;
+}
+
+.poem_btn .on {
+    position: absolute;
+    transition: all 0.2s linear;
+}
+
+.poem_btn .on.visibility {
+    opacity: 0;
+}
+
+.poem_btn img {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+.button-bar2 .poem_btn {
+    margin: 0.3rem;
+}
+
+.poem_btn_icon img {
+
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+.poem_btn_icon {
+    margin-bottom: -3px;
+    width: 1.2rem;
+    height: 1.2rem;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.poem_link {
+
+    color: var(--primary-dark);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.lesson_background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: var(--app-background);
+    z-index: 1100;
+}
+
+.lessons_container {
+    overflow-y: auto;
+    max-height: min(90vh, 200rem);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 16rem));
+    gap: 0.5rem;
+    justify-content: center;
+    grid-template-areas:
+        'l9 l10 l11 l12'
+        'l8 l7 l6 l5'
+        'l1 l2 l3 l4';
+}
+
+@media only screen and (max-width: 1050px) {
+    .lessons_container {
+        grid-template-areas:
+            'l12 l11 l10'
+            'l7 l8 l9'
+            'l6 l5 l4'
+            'l1 l2 l3';
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .lessons_container {
+        grid-template-areas:
+            'l12 l11'
+            'l9 l10'
+            'l8 l7'
+            'l5 l6'
+            'l4 l3'
+            'l1 l2';
+    }
+}
+
+.lesson_container {
+    /* z-index: 1101;
+    overflow-y: auto;*/
+    /* width: 100%;
+    height: 100%; */
+    /*  max-height: min(90vh, 200rem); */
+
+    position: fixed;
+
+    width: 100%;
+    height: calc(100% - 3rem);
+    background-color: rgba(120, 120, 120, 0.3);
+    background-color: var(--app-background);
+
+    z-index: 1110;
+}
+
+.lesson_card_container {
+    overflow: hidden;
+    box-shadow: 0 2px 20px #e1e5ee;
+    border-radius: 0.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: transform 200ms ease-in;
+}
+
+.lesson_card_image {
+    height: 12rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.lesson_card_title {
+    padding: 1rem;
+}
+
+.lesson_card_description {
+    padding: 0 1rem;
+}
+
+.lesson_card_btn {
+    padding: 1rem;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 1rem;
+    border: 2px solid #d50000;
+    background: transparent;
+    color: #d50000;
+    border-radius: 0.2rem;
+    transition: background 200ms ease-in, color 200ms ease-in;
+}
+
+.lesson_card_container:hover {
+    transform: scale(1.02);
+}
+
+.lesson_card_container:hover .lesson_card_btn {
+    background: #d50000;
+    color: white;
+}
